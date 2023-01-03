@@ -3,7 +3,34 @@ img {
 }
 
 header {
-    padding: 1rem 0;
+    position: relative;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
     background-color: tan;
-    border-bottom: 1rem solid brown;
+    border-bottom: 7px solid brown;
+
+    z-index: 0;
+
+    a {
+        z-index: 10;
+    }
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 10rem;
+    height: $header-height;
+    transform: rotate(-30deg);
+    background-image: url('/resources/img/vecteezy_post-stamps-clipart-design-illustration_9384430_49.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
 }
