@@ -30,7 +30,13 @@
                                 <td>{{ $letter->name }}</td>
                                 <td>{{ $letter->lastname }}</td>
                                 <td class="text-center">{{ $letter->rating }}</td>
-                                <td class="text-center">{{ $letter->delivered }}</td>
+                                <td class="text-center">
+                                    @if ($letter->delivered)
+                                        <i class="fa-solid fa-check text-success"></i>
+                                    @else
+                                        <i class="fa-solid fa-xmark text-danger"></i>
+                                    @endif
+                                </td>
                                 <td>
                                     <a class="btn btn-primary" href="{{ route('letters.create') }}">
                                         <i class="fa-solid fa-plus"></i>

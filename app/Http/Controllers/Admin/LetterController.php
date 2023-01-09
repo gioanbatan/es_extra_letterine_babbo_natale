@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Functions\Helpers;
 use App\Http\Controllers\Controller;
 use App\Models\Letter;
 use Illuminate\Http\Request;
@@ -37,7 +38,15 @@ class LetterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['delivered'] = Helpers::checkboxConverter($data, 'delivered');
+
+        $letter = new Letter();
+        $letter->fill($data);
+        // dd($letter);
+        $letter->save();
+        return redirect()->route('letters.index');
+        // return redirect->route('letters.show', $letter->id);
     }
 
     /**
