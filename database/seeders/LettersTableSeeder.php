@@ -6,7 +6,7 @@ use App\Models\Letter;
 use DateTime;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Faker\Generator as Faker;
+use Faker\Factory as Faker;
 
 class LettersTableSeeder extends Seeder
 {
@@ -15,8 +15,10 @@ class LettersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run(Faker $faker)
+    public function run()
     {
+        $faker = Faker::create('it_IT');
+
         for ($i = 0; $i < 20; $i++) {
             $newLetter = new Letter();
 
