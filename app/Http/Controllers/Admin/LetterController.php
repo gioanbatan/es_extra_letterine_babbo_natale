@@ -57,7 +57,12 @@ class LetterController extends Controller
      */
     public function show($id)
     {
-        //
+        $letter = Letter::find($id);
+        if ($letter === null) {
+            abort(404);
+        }
+
+        return view('letters.show', compact('letter'));
     }
 
     /**

@@ -41,6 +41,9 @@
                                     <a class="btn btn-primary" href="{{ route('letters.create') }}">
                                         <i class="fa-solid fa-plus"></i>
                                     </a>
+                                    <a class="btn btn-primary" href="{{ route('letters.show', $letter->id) }}">
+                                        <i class="fa-regular fa-eye"></i>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
