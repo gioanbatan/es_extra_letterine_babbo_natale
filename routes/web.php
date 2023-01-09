@@ -18,4 +18,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+
 Route::resource('letters', LetterController::class);
+// Route::prefix('admin')->group(function () {
+//     Route::resource('letters', LetterController::class);
+// });

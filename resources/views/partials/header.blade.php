@@ -6,7 +6,7 @@
             </div>
 
             <div class="col-4 d-flex justify-content-end align-items-center">
-                @yield('actions')
+                @yield('access')
             </div>
         </div>
     </div>

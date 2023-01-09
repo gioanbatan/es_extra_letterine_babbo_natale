@@ -22,7 +22,7 @@ class LettersTableSeeder extends Seeder
 
             $newLetter->name = $faker->firstName();
             $newLetter->lastname = $faker->lastname();
-            $newLetter->address = $faker->address();
+            $newLetter->address = $faker->streetAddress();
             $newLetter->city = $faker->city();
             $newLetter->arrive_date = $faker->DateTime();
             $newLetter->gift = $faker->word();

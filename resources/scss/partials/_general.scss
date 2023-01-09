@@ -2,6 +2,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 header {
     position: relative;
     height: $header-height;
@@ -17,6 +21,15 @@ header {
 
     a {
         z-index: 10;
+
+    }
+
+    .ms_btn-header {
+        background-color: $btn-header;
+        border-radius: 7px;
+        padding: 1rem;
+        background-color: $btn-header;
+        color: brown;
     }
 }
 
